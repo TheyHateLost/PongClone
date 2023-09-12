@@ -12,13 +12,22 @@ public class BallMovement : MonoBehaviour
     private float xBorder = 7.5f; //variable for horizonal border 
     private float yborder = 4.5f; //variable for vertical border 
 
+    //variable for move state 
+    public bool xMove = true; 
+    public bool yMove = true; 
+    
+    
+    //start is called before the first frame update 
+    void Start()...
 
+        //update is called once per frame 
+        void Update ()
 
     // Start is called before the first frame update
     void Start()
-    { 
-    xSpeed = 0.0125f; //declare value for horizonal speed 
-    yspeed = 0.0125f; // declare value for vertical speed 
+    {
+        xSpeed = 0.0125f; //declare value for horizonal speed 
+        yspeed = 0.0125f; // declare value for vertical speed 
     }
 
 
@@ -28,10 +37,16 @@ public class BallMovement : MonoBehaviour
     {
         //horizonal movement
         transform.position = new Vector2(transform.position.x + xSpeed, transform.position.y); //move right 
+      else (yMove == true) 
         if (transform.position.x >= xBorder)
 
         {
             xSpeed = -xSpeed; //make it go left 
-        }
-    }
-}
+
+            if (transforms.position.x <= -xBorder)
+
+            {
+                xSpeed *= -1;
+            }
+
+
