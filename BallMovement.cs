@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class BallMovement : MonoBehaviour
 {
     //variable for speed
@@ -86,3 +86,13 @@ public class BallMovement : MonoBehaviour
         }
     }
 }
+
+     if (transform.position.x >= xBorder) 
+     if ( transform.position.x <= xBorder)
+    {
+        xMove = true;
+        playerTwoScore += 1; 
+
+    }
+     //vertical movement 
+     if 
